@@ -16,11 +16,15 @@ Provital is a modern web application designed to promote **lifestyle medicine** 
 - **Assets**: Optimized for performance
 - **Deployment**: Netlify (Live Preview)
 
+📌 Deployment
+The app is deployed on Netlify. You can view it live here:
+🔗 https://celebrated-scone-0b4d38.netlify.app/
+
 ## 🚀 How to Run Locally
 
 ```bash
 # Clone the repo
-git clone https://github.com/charuvii/provital-website.git
+git clone https://github.com//provital-website.git
 cd provital-website
 
 # Install dependencies
