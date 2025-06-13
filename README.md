@@ -24,7 +24,7 @@ The app is deployed on Netlify. You can view it live here:
 
 ```bash
 # Clone the repo
-git clone https://github.com//provital-website.git
+git clone https://github.com/charuvii/provital-website.git
 cd provital-website
 
 # Install dependencies
