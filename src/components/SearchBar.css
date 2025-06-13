@@ -1,0 +1,54 @@
+.searchbar-container {
+    display: flex;
+    background-color: white;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .search-input {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  .search-input input {
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    width: 100%;
+  }
+  
+  .find-now-btn {
+    background: linear-gradient(90deg, #38ef7d, #11998e, #00c6fb);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    white-space: nowrap;
+  }
+   
+  .find-now-btn:hover {
+    background-color: #0d64d2;
+  }
+  
+  .search-icon {
+    font-size: 1rem;
+  }
+  

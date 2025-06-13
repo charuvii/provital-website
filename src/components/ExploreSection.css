@@ -1,0 +1,45 @@
+.explore-container {
+    background-color: #fff;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .explore-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  .icon-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    padding: 1rem;
+    justify-content: center;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  
+  .icon-card {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    background-color: #f2f2f2;
+    padding: 1.2rem;
+    border-radius: 10px;
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .icon-card svg {
+    font-size: 2rem;
+    color: #ff6b81;
+    margin-bottom: 0.5rem;
+  }
+  
+  .icon-card p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  

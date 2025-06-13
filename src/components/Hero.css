@@ -1,0 +1,163 @@
+/* Reset default spacing and ensure full-width layout */
+body, html, #root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 2rem;
+    overflow: hidden;
+    position: relative;
+    background-color: white;
+    gap: 3rem;
+  }
+  
+  /* Wrapper to allow floating SearchBar over scrolls */
+  .left-scrolls-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Scrolling image columns */
+  .left-scrolls {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .image-column {
+    display: flex;
+    flex-direction: column;
+    height: 200%; /* key for infinite loop */
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+   
+  .scroll-down {
+    animation-name: scrollDown;
+  }
+  
+  .scroll-up {
+    animation-name: scrollUp;
+  }
+  
+  .image-column img {
+    width: 160px;
+    height: auto;
+    border-radius: 16px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .floating-searchbar {
+    position: absolute;
+    top: 60%; /* push it lower beneath hero text */
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    pointer-events: none; /* make transparent to clicks except input area */
+  }
+  
+  .floating-searchbar {
+    position: absolute;
+    top: 65%; /* Pushed lower */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    z-index: 10;
+  }
+  
+  .floating-searchbar > * {
+    width: 100%;
+    max-width: 960px;
+    background-color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    pointer-events: auto;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }  
+  .center-text {
+    width: 50vw;
+    text-align: left;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem; /* Keeps space between heading and subtext */
+    z-index: 11;
+    position: relative;
+    padding-bottom: 2.5rem;
+    margin-top: -6rem; /* Pulled higher */
+  }
+   
+  .center-text h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    line-height: 1.2; /* Slightly reduced for tighter heading */
+    margin-bottom: 0.2rem; /* Reduced */
+  }
+  
+  .center-text p {
+    font-size: 1.2rem;
+    color: #444;
+    margin: 0; /* Ensures no default margin pulls it down */
+  }
+  
+  .center-text button {
+    padding: 0.75rem 1.8rem;
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  @keyframes scrollDown {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+  
+  @keyframes scrollUp {
+    0% {
+      transform: translateY(-50%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  
+  /* Slanted gradient bar at bottom */
+  .slant-bar {
+    position: absolute;
+    bottom: -28px;             /* Adjust based on visual balance */
+    left: -5%;
+    width: 110%;
+    height: 50px;              /* Reduced height for less motapa */
+    background: linear-gradient(90deg, #ffda6b, #f76ea3);
+    transform: skewY(-3deg);   /* Less skew = visually thinner slant */
+    transform-origin: top left;
+    z-index: 2;
+  }
+  
